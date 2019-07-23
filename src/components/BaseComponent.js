@@ -27,6 +27,7 @@ export default function createComponent(AntdComponent, mapProps) {
         hasFeedback = true,
         colon,
         required,
+        children = null,
         ...rest
       } = mapProps(this.props);
 
@@ -44,6 +45,7 @@ export default function createComponent(AntdComponent, mapProps) {
           required={required}
         >
           <AntdComponent {...rest} />
+          {children}
         </FormItem>
       );
     }

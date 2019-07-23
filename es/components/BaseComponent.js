@@ -76,7 +76,9 @@ function createComponent(AntdComponent, mapProps) {
             hasFeedback = _mapProps$hasFeedback === void 0 ? true : _mapProps$hasFeedback,
             colon = _mapProps.colon,
             required = _mapProps.required,
-            rest = _objectWithoutProperties(_mapProps, ["label", "labelCol", "wrapperCol", "help", "extra", "validateStatus", "hasFeedback", "colon", "required"]);
+            _mapProps$children = _mapProps.children,
+            children = _mapProps$children === void 0 ? null : _mapProps$children,
+            rest = _objectWithoutProperties(_mapProps, ["label", "labelCol", "wrapperCol", "help", "extra", "validateStatus", "hasFeedback", "colon", "required", "children"]);
 
         return _react.default.createElement(_FormItem.default, {
           label: label,
@@ -89,7 +91,7 @@ function createComponent(AntdComponent, mapProps) {
           validateStatus: validateStatus,
           colon: colon,
           required: required
-        }, _react.default.createElement(AntdComponent, rest));
+        }, _react.default.createElement(AntdComponent, rest), children);
       }
     }]);
 
